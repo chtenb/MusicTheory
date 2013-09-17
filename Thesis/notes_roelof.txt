@@ -1,0 +1,92 @@
+#
+
+"There have been many investigations throughout the history, trying to find an answer to this question."
+--stilistisch iets mooier->
+"There have been many investigations throughout history, trying to find an answer."
+
+"- this question did not receive a statisfactory answer."
+--misschien liever->
+"- this question did not receive a definitive answer."
+(Bij de eerste lijk je je te beroepen op een eigen authoriteit,
+bij de tweede beroep je je erop dat er simpelweg geen consensus bestaat).
+
+"[...], the kind of music someone is accustomed to, etcetera."
+---->
+"such as musical taste or the kind of music someone is accustomed to."
+(etcetera kan op zich, maar je geeft maar twee voorbeelden, dus dan is 'or' (of 'and') m.i. mooier)
+
+"has no application other than intellecutal amusement."
+---->
+"might have no application other than intellecutal amusement."
+(immers, het gaat er juist om dat het zou kúnnen dat het wel andere applicaties biedt,
+wat je zelf ook zegt, verderop - dus dit spreekt in huidige staat een beetje tegen)
+
+#
+
+je zegt ook in andere plaatsen van je thesis vaak "the history" in plaats van "history",
+hoewel het geen foutief Engels is, is het wel erg duidelijk dat het uit het Nederlands komt
+- in het Engels voeg je alleen het lidwoord doe wanneer je het daadwerkelijk over een
+specifieke geschiedenis hebt ("The history of science", "The history of insects"),
+als je gewoon geschiedenis bedoelt, dan zegt men "history" zonder lidwoord.
+
+Ook heb je bij "notation conventions" een lidwoord voor je multiplicatie staan
+(bij de derde conventie), ("We will always assume -the- . as"), hier zou ik
+het lidwoord óók weglaten. Een soort zelfde verschil tussen algemeen/specifiek gebruik.
+
+In Theorem 1.4, moet "exist" "exists" zijn, anders zijn "p0" verschillende getallen.
+(Ook moet ik zeggen dat ik het bewijs daar niet geheel volg, verder, maar ik heb er
+nog niet enorm lang naar gekeken).
+
+Bij Corriolary 1.5 zou ik van "with p prime" maken "where p is a prime"
+
+In definitie 1.6 heb je de mutiplicatie en de groep verkeerd om, geloof ik?
+
+Definition 2.1 heb je "norm on G is", die "is" daar moet weg
+
+In definition 2.2 zet je "for all g, h, i" terwijl je g, h en j gebruikt.
+
+In paragraaf 2.3 heb je "This too can be interpret", wat uiteraard
+"this too can be interpretated" moet zijn
+
+(ik weet trouwens niet of je nog even uit moet wijden over wat "coprime" inhoud?
+misschien is het handig voor mensen die niet zo met priemen bezig zijn dat nog even
+specifieker te noemen)
+
+Namen van personen (Inleiding op Chapter 3) maak je doorgaans niet schuin
+
+In 3.1 zeg je "major D" scale, gebruikelijker is "D major"
+
+In 3.2 "between every tone and the subsequent tone", daar zou ik
+"between every tone and its subsequent tone" doen
+
+"To make the numbers nice for display" klinkt wat Engels-met-een-Indisch-accent.
+"To make the numbers nice" is misschiel al genoeg. In de volgende zin zou ik
+"decide to" ook weglaten.
+
+In dezelfde alinea, "had to be overpassed" - hier is "overpassed" een vrij on-
+gebruikelijk woord (wel correct Engels, though). Misschien "traveled" doen.
+
+(in Figure 3.2 "to previous tone" zou ik "to the previous tone" doen)
+
+De alinea daarop volgend, "The numbers right below a tone, is the harmonic",
+dat moet "number right below a tone" zijn
+
+Na de laatste alinea van paragraaf 3.2 zou je misschien nog een opmerking
+kunnen plaatsen over hoe het afwijken van de observatie (tonen tussen elkaar
+kleiner dan tot de tonica) wellicht te maken heeft met andere muziektheoretische
+eigenschappen - maar dat dat buiten het bereik van de thesis valt.
+Nu lijk je dingen die niet aan de observatie voldoen een beetje 'af te wimpelen'
+t.b.v. de observatie, hoewel dat je bedoeling helemaal niet is.
+
+In 3.3
+"We like to analyse a polyphonic piece now" - misschien:
+"we would like to analyse polyphony now", omdat een "piece" ook het woord is
+voor een "muziekstuk"
+
+#
+
+De epiloog is wat bondig en, zoals de engelsen zeggen, 'bold' - maar lijkt me
+op zich prima. Als je begeleider er geen problemen mee heeft, zou ik het zo
+laten.
+Wel zou ik nog "to be at least a little consistent with our experience" veranderen
+in "to be at least a little consistent with our experience of music".

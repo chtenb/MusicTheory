@@ -1,0 +1,68 @@
+Beste Anja,
+
+Ik ben aan de slag gegaan met het commentaar dat u gaf, en ik heb geprobeerd om het zo goed mogelijk te verwerken.
+Ik heb het nieuwe resultaat bijgevoegd.
+Voor de overzichtelijkheid geef ik hieronder nog even kort een reactie op het commentaar, zodat het misschien wat duidelijker is wat ik heb veranderd.
+
+COMMENTAAR UIT DE MAIL
+Commentaar: 
+1) Very urgent - please clarify: what is the question that you are investigating in this thesis? What is it in music that you want to model mathematically? The thesis is too unspecific about this. In the Introduction you motivate: you will study consonance and dissonance between pairs of tones. However, in the following chapters, you introduce the tonal space and a harmonic and melodic  distance - but in how far does this relates to consonance and dissonance, this is not discussed, and is not clear to me. From my point of view, you do not have to write about consonance and dissonance, since this is a very complex, non-trivial concept as I have explained earlier, but if you do, you need to link your chapters 1-3 to it. And you need to motivate the concept of "consonance vs. dissonance" better, mentioning different perspectives on it (e.g. music theory, psychoacoustic-related studies).  I had sent earlier examples to you.
+Antwoord:
+    * Ik begrijp dat het verduidelijkend is als ik een onderzoeksvraag formuleer.  De volgende vraag dekt de lading wel goed: "Can we create a simpel model which describes tones and some basic properties of tones?"
+    Ik heb deze in de inleiding en de epiloog verwerkt.
+    * We proberen alleen te modelleren wat tonen zijn en hoe ze zich tot elkaar verhouden. Dit heb ik ook in de inleiding verwerkt.
+    * Over consonantie en dissonantie, ik ben het volledig met u eens dat dat slecht uitgewerkt wordt, en eigenlijk geen weerklank vindt in de rest van de scriptie. Het lijkt mij eveneens beter om dat uit de inleiding te halen, zodat er geen verwarring geschept wordt over deze beladen begrippen.
+
+
+Commentaar:
+2) Give in your introduction and motivation a short introduction into the area of Mathematical Music Theory, to contextualize your thesis. What are questions addressed, what types of mathematical modelling is used? Use for this the texts that I had sent to you earlier (text by Honingh and Volk, by Thomas Noll), you can also check out another paper by me and Aline Honingh: http://www.tandfonline.com/doi/full/10.1080/17459737.2012.704154 All three texts are easy to read (the paper by Thomas Noll may be somewhat more difficult, but you do not need to parse every mathematical detail), with not too much mathematical details that might be too difficult to understand. These papers should provide you with an overview of "what questions are addressed in Mathematical Music Theory", which should help you to locate your thesis better in this context. The title "Formal Music Theory" is way too big and too ambitious: since music theory is much bigger than anything you can achieve  with a bachelor's thesis.
+Antwoord:
+    * De contextualisatie van de scriptie zal ik uitgebreider proberen te doen, met verwijzingen naar studies.
+    Een vraag hierover: In de inleiding wil ik graag Marsden citeren, maar dat is wel in een paper waarin hij ook geciteerd wordt. Hoe moet ik dat precies doen?
+    * Over the titel: het was geenzins mijn bedoeling om the suggereren dat deze scriptie de formele muziek theorie zou omvatten.  Ik wilde er eerder het onderwerp mee aanduiden, en in de ondertitel de inhoud weergeven. Blijkbaar wekt deze titel inderdaad de verkeerde suggestie, en klinkt het veel te pretentieus of arrogant.  Maar dat was absoluut niet mijn bedoeling, dus ik zal het een andere titel geven die meteen de lading zou moeten dekken.
+
+
+Commentaar:
+3)Please think about what you want to achieve with your harmonic and melodic distancse. In mathematical terms, it is fine to do the formalizations that you suggest and have written up so far, but again the motivation should be clearer what this distances try to capture.  
+Antwoord: 
+    * Ik heb geprobeerd in hoofdstuk 2 duidelijk te maken wat de aanleiding is om deze eigenschappen te formuleren.
+
+
+Commentaar:
+hier punt 4) je gaat in Remark 2.12 in op Euler en consonance. Dus hier is inderdaad ietswat van een link terug na je introductie, waar het over "consonance/dissonance" gaat. Maar wat wil je dan met je "harmonic distance": zou het een verbetering zijn van Euler? Een alternatief? En waarom word in sectie 2.4 die twee distancen gecombineert?
+Antwoord:
+    * De harmonic distance is een algemene vorm van van eulers formule, en is compatibel met de axioma's van afstand. 
+    Ik heb er wat meer over geschreven.
+    * De som van de beide afstanden is een experimenteel ding, die niet op voorhand al een interpretatie heeft.  Echter, het is wiskundig correct om deze te beschouwen. Het is bedoeld als voorbeeld van een mogelijke metriek die je zou kunnen aanbrengen op de tonale ruimte. In hoofdstuk 3 gebruiken we bovendien deze afstand om te kijken of de harmonische en melodische afstand elkaar enigzins neutraliseren.
+
+
+Commentaar:
+5)  If you want to analyse a musical piece with a harmonic distance metric, a distance between two consecutive intervals (hence in a piece that consists of two voices), might make sense regarding something like a "tension".  This might again be related to consonance/dissonance, so perhaps if you motivate consonance/dissonance better (something like dissonance expresses a certain tension that needs to be resolved, therefore followed by a consonance), your consonance/dissonance motivation will fit here. 
+Antwoord:
+    * Omdat ik het consance/dissonance uit de inleiding heb gehaald is dit niet meer van toepassing.
+
+
+Commentaar:
+6)  I do not understand why you compute harmonic distances (in Figure 3.3) between consecutive tones? Melodic distances make sense for a composition in Figure 3.3., but not harmonic distances. Vice versa, harmonic distance makes sense in Figure 3.6, but melodic distance between tones that are played simultaneously in Figure 3.6 does not make sense.  As with my previous remarks: the question is, what is the motivation of doing it? Just because we can do it mathematically, does not yet justify that it make sense doing it musically. So be clearer about your intentions!
+Antwoord:
+    * Andere namen voor deze twee metrieken zouden misschien beter zijn. Ik heb de indruk dat ze een verkeerde suggestie wekken. Wellicht kunnen we "melodic distance" vervangen door "pitch distance". Voor "harmonic distance" heb ik nog geen betere uitdrukking vinden. Ik heb het initieel zo genoemd, omdat deze afstand iets zegt over de harmonische verwantschap tussen twee tonen in termen van boventonen en ondertonen ("harmonics and subharmonics").
+    * Ik wilde niet bij het definiëren van deze metrieken al invullen wat ze zouden betekenen, deels omdat ik zelf ook niet precies de volledige betekenis van de harmonische metriek weet. Daarom heb ik bijvoorbeeld de harmonische metriek bij het 'testen' niet alleen beperkt tot tonen die tegelijk gespeeld worden, maar ook gebruikt bij het beschouwen van andere tonenparen.
+
+
+COMMENTAAR UIT DE PDF
+De commentaren die hier niet bij staan zijn vanzelf opgelost door dat ik aan de hand van ander commentaar het betreffende stuk heb herschreven.
+
+Commentaar: "we would not compromise reality.", what do you mean here with "compromise reality"?
+Antwoord: Ik heb de zin nog iets aangepast. "To compromise" zou hier vertaald moeten worden met "tekort doen (aan)".
+
+
+Commentaar: "muliply the tonic with 3", we do not multiply the tone, but the corresponding frequency
+Antwoord: Ik heb er nu steeds bij gezet dat we frequenties vermenigvulden, tot het punt dat de formele definitie wordt gebruikt.
+
+
+Commentaar: "multiplying a tone with a “simple” number co ̈ıncides with multiplying a tone with another tone", from what perspective makes it sense to multiply tones with each other? From a musical point of view, adding an interval to a tone in order to reach another tone, that makes sense. 
+Antwoord: Ik heb er nu bij gezet dat dit correspondeerd met "stacking intervals on a tone"
+
+
+Commentaar: "understanding the connection between tonal spaces and actual music that is mostly written in equally tempered scale", This is wrong: the notation of a piece of music does not specify a certain underlying temperament. You need to distinguish two different spaces here: one is the notation with note names, the other space is the corresponding tone that sounds when this (written) note is played. 
+Antwoord: Het was niet mijn bedoeling om notatie hier bij te betrekken. Ik wilde slechts aangeven dat veel music niet rein wordt gespeeld, en dat het in dat geval niet perse duidelijk is welke reine tonen corresponderen met welke gelijkzwevende tonen. Ik heb het nu anders verwoord.

@@ -1,0 +1,43 @@
+The starting point of Helmholtz's ap-
+proach is his consonance curve. 
+Imag-
+ine two instruments playing a note in
+unison. 
+If one of the frequencies is
+slowly increased, one will hear a beat-
+ing.
+ First it is slow, but it b e c o m e s
+quicker and "more unpleasant". 
+Helm-
+holtz quantified this sensation by asso-
+ciating a "degree of unpleasentness": if
+the n u m b e r of beats is x, then r
+mea-
+sures the "unpleasantness". 
+Obviously
+one has ~ 0 ) = 0, and qualitatively it is
+clear that ~ will first increase up to an
+m a x i m u m (which is assumed to be
+around x = 30) and then decrease.
+
+In order to have a mathematically
+simple representation of ~p, Helmholtz
+chose ~ x ) = ax/(30 + x2) 2, a choice
+which of course is somewhat arbitrary.
+This ~ is used to explain consonance as
+follows. 
+If two instruments play an in-
+terval, one has to sum u p the q>-values
+which belong to every pair of frequen-
+cies from the list of all pitches which oc-
+cur in the Fourier expansion of the two
+notes which constitute the interval.
+
+The result is a rather rough curve
+with m i n i m u m zero at the frequency ra-
+tios 1:1 and 2:1. 
+But, remarkably, there
+are also s o m e steep valleys in the graph
+at 3:2, 5:4, and the other ratios which
+c o r r e s p o n d to the Pythagorean scale.
+

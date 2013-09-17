@@ -1,0 +1,217 @@
+%        File: MuziekTheorie.tex
+%     Created: Fri Dec 23 10:00 PM 2011 C
+% Last Change: Fri Dec 23 10:00 PM 2011 C
+%
+\documentclass[a4paper]{article}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[dutch]{babel}
+
+\author{Chiel ten Brinke \\ Roelof ten Napel}
+\title{De Theorie van Harmonie}
+
+\newtheorem{st}{Stelling}
+\newtheorem{dfn}[st]{Definitie}
+
+\begin{document}
+\maketitle
+
+\section*{Inleiding}
+(\ldots)
+We willen een wiskundige theorie ontwikkelen over de muziek, te beginnen bij de harmonie.
+Inmiddels hebben veel wetenschappers zich gebogen over de systemen in de muziek.
+De meeste theorie\"en komen helaas niet verder dan een opsomming van regelmatigheden die men kan constateren als men zich bezighoudt met muziek.
+In deze theorie willen we verder gaan dan dat. 
+We willen een theorie die op zichzelf staat, maar wel isomorf is met de muziek.
+We willen zelfs nog verder gaan.
+In plaats van wiskunde te zien als model voor muziek, kunnen we muziek gaan zien als een concretisering van wiskunde.
+Het doel van deze theorie is dat we in staat zullen zijn de harmonie te kunnen bevatten.
+Daardoor zullen we ook eenvoudiger systematisch harmonie kunnen cre\"eren.
+(\ldots)
+
+\section*{Grondbeginselen}
+Voor de ontwikkeling van de theorie moeten we muziek eerst als uitgangspunt nemen.
+We moeten goede axioma's kiezen om de theorie op te bouwen.
+Daarvoor zullen we een grondige analyse van muziek moeten doen.
+
+\subsection*{Resum\'e}
+Vanuit de natuurkunde 'weten' we dat muziek een vorm van geluid is, en dat geluid bestaat uit golven.
+In de wiskunde hebben we een formule bedacht die het gedrag van golven beschrijft: de sinus.
+Voor een functie van de vorm $\sin{2\pi a x}$ geldt dat de frequentie gegeven wordt door $a$ en de periode door $\frac{1}{a}$.
+
+Uit andere theorie\"en weten we dat harmonie in muziek alles te maken heeft met veelvouden van perioden.
+\begin{itemize}
+	\item
+		Een kort resum\`e van harmonie met perioden
+\end{itemize}
+
+\subsection*{Abstractie van natuurkunde}
+Als we de zojuist geresumeerde wetenschap als axiomatisch uitgangspunt nemen voor de theorie, is het prettig als we alle onnodige facetten uit dat model weglaten.
+We willen abstraheren van de natuurkunde en het feit dat het om geluid gaat vergeten.
+Desondanks willen we ons wel laten inspireren door de natuurkundige kennis omtrent geluid bij het maken van de axioma's.
+Deze werkwijze zult u veel tegenkomen.
+Eerst het bestuderen van bestaande kennis.
+Daarna het defini\"eren van de axioma's.
+%Zoals we reeds gezien hebben, vormen verschillende tonen samen harmonie, en tellen we de functies van de tonen bij elkaar op als we de functie van de gevormde harmonie willen hebben.
+%We zijn dus ge\"interesseerd in het gedrag van sinuso\"iden onder optelling.
+%Het zou wellicht een uitermate goed uitgangspunt geven als we een operatie konden definieren waarmee we tonen kunnen samenstellen en alle noodzakelijke informatie behouden.
+
+\subsection*{Axioma's}
+De kleinste bouwstenen van de muziek zijn tonen.
+Laten we beginnen met deze te defini\"eren.
+
+In de natuurkunde wordt een toon (geluid) weergegeven met een zuivere sinus, dat wil zeggen, een functie van de vorm $\sin{2\pi a x}$.
+We zouden de frequentie $a$ van deze sinusfunctie kunnen zien als unieke representatie van de sinus.
+Dan kunnen we een zuivere sinus met een enkel getal weergeven.
+
+\begin{dfn}
+	Een toon is een rationaal getal.
+\end{dfn}
+
+\paragraph{}
+De reden dat we ons beperken tot rationale getallen zal later blijken.
+We zullen een operatie defini\"eren, waarbij we de eigenschap van rationale getallen nodig hebben.
+
+\begin{dfn}
+	Een klank is een eindige verzameling tonen.
+\end{dfn}
+
+\paragraph{}
+We laten ons inspireren door de eigenschappen van periodieke functies.
+Laten we gaan kijken naar de frequentie van de somfunctie van periodieke functies.
+Er geldt dat de som van twee periodieke functies met frequenties $a,b \in \mathbb{Q}$ periodiek is als er gehele getallen $k , l$ bestaan met de eigenschap dat $\frac{k}{a} = \frac{l}{b}$.
+De frequentie van de somfunctie wordt gegeven door $\frac{l}{b}$ of $\frac{k}{a}$.
+De volgende stelling geeft een methode om de frequentie van een somfunctie expliciet te berekenen.
+
+\begin{st}\label{somperiode}
+	Zij $f$ en $g $ twee periodieke functies met rationale frequenties $a$ en $b$.
+	De frequentie van de somfunctie $f+g$ wordt gegeven door $\frac{a}{k}$ of $\frac{b}{l}$, waarbij $\frac{k}{l}$ de volledig vereenvoudigde breuk $\frac{a}{b}$ is, zodanig dat $k,l \in \mathbb{N}$.
+\end{st}
+\begin{proof}
+	Zij $f,g,a,b$ zoals hierboven. (\dots)
+\end{proof}
+
+\paragraph{}
+Ge\"inspireerd door het bovenstaande, definieren we een operator op twee tonen die een getal oplevert.
+Natuurkundig gezien komt dit getal overeen met de frequentie van de somfunctie van de geluidsgolven die corresponderen met de twee tonen.
+	
+\begin{dfn}
+	Definieer de binaire operator $\circ$ als samenstelling op twee tonen $a,b$ zodanig dat
+	\begin{equation}
+		a\circ b = \frac{a}{k}
+		\label{defsamenstelling}
+	\end{equation}
+	waarbij $k,l \in \mathbb{N} $ zo klein mogelijk en $ \frac{k}{l} = \frac{a}{b}$.
+	Merk op dat deze operatie commutatief en associatief is.
+\end{dfn}
+
+\paragraph{Opmerking}
+Een optelling van twee zuivere sinus levert in het algemeen niet opnieuw een zuivere sinus op als we het natuurkundig bekijken.
+Daarom verliezen we informatie over een klank, als we deze met 1 getal - de natuurkundige frequentie - zouden weergeven.
+We willen echter een eenvoudige start maken, daarom defini\"eren we het product van twee tonen als zijnde opnieuw een getal en kijken wat deze definitie met zich mee brengt.
+
+\paragraph{}
+Het zou prettig zijn als we iets zouden kunnen zeggen over de mate van consonantie van een klank.
+Als we twee tonen vermenigvuldigen die veelvoud van elkaar zijn, resulteert dit in een een kleinere frequentie dan wanneer dit niet het geval is.
+Vanuit muzikale praktijk weten we dat een klank bestaande uit tonen die een veelvoud van elkaar zijn consonant klinkt. 
+Daarom voeren we de volgende definitie in.
+
+\newcommand{\consonantie}{\mathrm{consonantie}}
+\newcommand{\dissonantie}{\mathrm{dissonantie}}
+\begin{dfn}
+	De mate van consonantie van een klank $K = \{a_1, \dots ,a_n\}, n\in \mathbb{N},$ geven we weer door alle tonen van die klank te vermenigvuldigen met de $\circ$ operator en daarna te delen door de kleinste toon, volgens de algemene deling op rationale getallen.
+	In formules:
+	\begin{equation}
+		\consonantie(K) = \frac{a_1\circ a_2\circ  \dots \circ a_n}{\max(K)}
+	\end{equation}
+	De dissonantie van een klank is omgekeerd evenredig met de consonantie.
+	\begin{equation}
+		\dissonantie(K) = \frac{1}{\consonantie(K)}
+	\end{equation}
+
+	Laat $K,L$ klanken. $K$ heet consonanter resp. dissonanter dan $L$ als $\consonantie(K) > \consonantie(L)$ resp. $\consonantie(K) < \consonantie(L)$.
+\end{dfn}
+
+\paragraph{Voorbeelden}
+We gaan eens kijken wat de consonantie is van een aantal drieklanken.\\
+Laat $K = \{1,3,4\}$. Dan geldt dat $\consonantie(K) = \frac{1\circ 3\circ 4}{\max(K)} = \frac{1}{4}$. \\
+Laat $Am = \{330,440,528\}$. Dan is de bijbehorende consonantie $\frac{330\circ 440\circ 528}{\max(K)} = \frac{22}{528} = \frac{1}{24}$.\\
+Laat $Bdim = \{495,297,352\}$. Dan is de bijbehorende consonantie $\frac{495\circ 297\circ 352}{\max(K)} = \frac{11}{495} = \frac{1}{45}$.
+
+\paragraph{Observatie}
+Laat $t_x$ een toon gegeven door $\frac{x}{x+1}$, waarbij $x \in \mathbb{N}, x \geq 1 $.
+We beschouwen de samenstelling hiervan met de toon $1$.
+Vanuit de definitie van de samenstelling werkend, moeten we de breuk $\frac{1}{\frac{x}{x+1}} = \frac{x+1}{x}$ vereenvoudigen totdat er zo klein mogelijke natuurlijke getallen in de teller en noemer staan.
+Omdat $x$ een natuurlijk getal is, geldt dat zowel de teller als de noemer van de laatste breuk natuurlijke getallen zijn.
+Volgens de definitie wordt het resultaat van de samenstelling nu gegeven door $1$ te delen door de teller van deze laatste breuk.
+Dus $1 \circ t_x = \frac{1}{x+1}$.
+We beschouwen nu de toon $K_x = \{1,t_x\}$.
+De consonantie van deze toon is gelijk aan $\frac{\frac{1}{x+1}}{\frac{x}{x+1}} = \frac{1}{x}$.
+Dus naarmate $x$ groter wordt, wordt de consonantie van $t_x$ kleiner.
+Er geldt echter ook dat naarmate $x$ groter wordt, $t_x$ steeds beter $1$ benadert.
+In formules betekent dit dat
+\begin{equation*}
+	\begin{split}
+		\lim_{x \to \infty}{\consonantie(K_x)} 	&= \lim_{x \to \infty}{\frac{1}{x}} \\
+												&= 0
+	\end{split}
+\end{equation*}
+maar dat
+\begin{equation*}
+	\begin{split}
+		\consonantie(\lim_{x \to \infty}{K_x}) 	&= \consonantie(\lim_{x \to \infty}{\left\{ 1,\frac{x}{x+1} \right\}}) \\
+												&= \consonantie(\left\{ 1,1 \right\}) \\
+												&= 1
+	\end{split}
+\end{equation*}
+Deze observatie hoeft geen problemen op te leveren.
+Misschien willen we echter experimenteren met een functie die meer consonantie krijgt naarmate twee tonen elkaar naderen.
+
+\paragraph{Observatie uit de praktijk}
+In de praktijk van muziek is het zo dat klanken met weinig zweving zuiver en consonant klinken.
+Hiermee bedoel ik dat 
+\begin{itemize}
+	\item \'of de zweving zo langzaam gaat dat het onmerkbaar is.
+(Bijvoorbeeld, een grondtoon en de bijbehorende octaaf interfereren wel met elkaar, maar dat gaat in het algemeen zo snel dat het onmerkbaar is.)
+	\item \'of dat de zweving zo snel gaat dat het onmerkbaar is.
+(Een toon en zijn iets ontstemde gelijke interfereren ook met elkaar.
+Het periode verschil is echter zo klein dat de onstane zweving heel langzaam gaat, en dus niet merkbaar is.)
+\end{itemize}
+Conclusie: de somfrequentie zoals gedefinieerd met de samenstelling in (\ref{defsamenstelling}) heeft inderdaad te maken met consonantie.
+Maar de huidige definitie van consonantie zegt dat hoe langzamer de zweving, hoe dissonanter de klank.
+Uit de praktijk van muziek weten we dat er een soort omslagpunt is.
+Als we dat punt bereikt hebben werkt het verband tussen samenstelling en consonantie andersom.
+Dan geldt dat hoe langzamer de zweving hoe consonanter de klank.
+Dit wordt wellicht veroorzaakt doordat het menselijke gehoor niet oneindig nauwkeurig is in het bepalen van zweving.
+``Apparently for the first time in history, Euler suggests that the ear will tolerate small deviations from the exact ratios. This idea was finally confirmed in the 20th century through the discovery of categorical pitch perception pioneered by Houtsma in 1968.''
+
+
+
+%\subsection*{Evaluatie}
+%Bovenstaande idee blijkt niet zoveel nut te hebben.
+%Het gaat bij harmonie niet zozeer om de totale frequentie, maar om alle subtrillingen binnen die frequentie.
+%Daar wordt de harmonie door gevormd.
+%Dit kunnen we inzien als we als grondtoon een frequentie van 1 nemen.
+%Als we daar een willekeurige toon met een frequentie p bij optellen, zal dat volgens Stelling 1 resulteren in een frequentie van p. 
+%De informatie die we graag zouden willen behouden, namelijk de frequenties van de subtrillingen en daarmee de frequentie 1, gaat verloren.
+%Dus de optellingsoperatie op frequenties zoals in stelling 1 geeft niet de gewenste operatie die bruikbaar zou kunnen zijn bij het bestuderen van muziek.
+%
+%We willen een operatie die niet de totale nieuwe frequentie geeft, maar die de frequenties van alle ontstane subtrillingen bewaart. Alle andere informatie, zoals verschuivingen, is redundant en willen we weglaten omwille van de abstractie van de theorie.
+%\section*{Idee\"en}
+%
+%\paragraph{Verschuivingen}
+%Omdat $\sin ax + b$ dezelfde toon geeft als $\sin ax$ kunnen we concluderen dat we in de abstractie verschuivingen moeten weglaten. Het heeft geen invloed op de toon.
+%\paragraph{Een algebra\"ische structuur}
+%Een klank wordt gevormd uit tonen.
+%Als we dit aanhouden zijn tonen dus generatoren van de groep van klanken.
+%We kunnen tonen zien als een oneindige vrij verzameling van generatoren, die de oneindige groep van klanken genereert.
+%De operatie van deze tonen en klanken is simpelweg samenstelling.
+%Merk dan op dat deze groep abels is.
+%Dus voor generatoren (of tonen) $x_1,x_2,\dots$ ziet een element (of klank) er uit als een eindig woord van tonen: $x_{a_1}x_{a_2}\dots x_{a_n}$ met $(a_n)$ en rij gehele getallen.
+%Een lastig punt is het vaststellen van een identiteit.
+%We zouden stilte als de identiteit kunnen definieren. 
+%Natuurkundig gezien is dan de identiteit van een klank precies de spiegeling van de bijbehorende sinusoide in de evenwichtsstand.
+%Een probleem dat dit met zich mee brengt is het feit dat je in de praktijk van de muziek niet te maken hebt met inversen van geluid, ook al zijn ze er wel.
+%Dus waarschijnlijk brengt de voorgestelde definitie van identiteit niet de gewenste resultaten.
+%Maar natuurkundig gezien is het wel correct.
+%
+\end{document}
