@@ -6,7 +6,8 @@
 \usepackage{amssymb,amsmath,amsthm,enumerate,graphicx,float,lmodern}
 
 \title{A small mathematical model describing tones and their musical relationship}
-\author{Ch. B. ten Brinke}
+\author{Ch.\ ten Brinke}
+\date{July 2013}
 
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -97,7 +98,7 @@ can we create a simple mathematical model which describes tones and tone relatio
 We will use the following approach.
 In chapter~\ref{tonal_space} we will discuss a formal notion of tones and how these tones relate to each other.
 After that, in chapter~\ref{distance} we will consider some elegant mathematical properties of tones, in the form of a notion of distance.
-Finally, in chapter~\ref{application} we will briefly apply the model we created in chapters~\ref{tonal_space} and~\ref{distance} to a musical piece in order to get a small indication wether there is some meaning in this model.
+Finally, in chapter~\ref{application} we will briefly apply the model we created in chapters~\ref{tonal_space} and~\ref{distance} to a musical piece in order to get a small indication whether there is some meaning in this model.
 
 
 
@@ -134,8 +135,8 @@ This enables us to talk about relationships between musical tones as being numer
 \section{Harmonious relationships}
 %Anekdote about pythagoras
 Legends have come down to us, through the late Roman writer Boethius among others, relating how Pythagoras ``discovered'' a remarkable fact.
-They alleged that Pythagoras noted the harmonious relationships of the sounds produced by the hammers in a blacksmith's forge, and further investigations revealed that the masses of these hammers were, extraorinarily, in simple wholenumber ratios to each other!
-From this claimed observation Pythagoras is supposed to have leapt the realization that consonant sounds and simple number ratios are correlated - that ultimatily music and mathematics share the same fundamental basis. \cite{NeilBibby}
+They alleged that Pythagoras noted the harmonious relationships of the sounds produced by the hammers in a blacksmith's forge, and further investigations revealed that the masses of these hammers were, extraordinarily, in simple whole number ratios to each other!
+From this claimed observation Pythagoras is supposed to have leapt to the realization that consonant sounds and simple number ratios are correlated - that ultimately music and mathematics share the same fundamental basis. \cite{NeilBibby}
 
 %Explain why multiplication is a natural operation on tones
 Let us assume we have some initial tone, which we from now on refer to as \emph{tonic}.
@@ -144,8 +145,8 @@ According to Pythagoras, these are harmoniously closely related to the tonic, si
 
 Let us consider some examples of harmonious relationships between two tones, also known as \emph{intervals}, that have been recognized throughout history.
 They have been given names in traditional music theory that the reader may be familiar with.
-If we muliply the tonic's frequency with $2$, we get a tone that sounds an ``octave'' higher than the tonic.
-If we muliply the tonic's frequency with $\frac{3}{2}$, we get a tone that sounds a ``fifth'' higher than the tonic.
+If we multiply the tonic's frequency with $2$, we get a tone that sounds an ``octave'' higher than the tonic.
+If we multiply the tonic's frequency with $\frac{3}{2}$, we get a tone that sounds a ``fifth'' higher than the tonic.
 Any simple harmonious relationship that we know from experience, seems to correspond to some simple rational number.
 The most prominent ones have been listed in table~\ref{musical_intervals}.
 
@@ -287,7 +288,7 @@ We can explain this with the fact that our ears have a certain tolerance regardi
 So, tones that are just a little bit mistuned will not sound so bad.
 Our ears will still recognize the tone that was intended.
 
-Figure~\ref{equally_temperedness} confirms that the tones ocurring in the Ptolemaic scale are well approximated by tones in the twelve tone equally tempered scale.
+Figure~\ref{equally_temperedness} confirms that the tones occurring in the Ptolemaic scale are well approximated by tones in the twelve tone equally tempered scale.
 
 \begin{figure}[H]
     \centering
@@ -450,7 +451,7 @@ The following definition of pitch distance will suffice this property, as shown 
 
 \section{Harmonic distance}
 In this section we will consider a second kind of distance between tones.
-Unlike pitch distance, this property doest not have a clear musical interpretation on beforehand.
+Unlike pitch distance, this property does not have a clear musical interpretation on beforehand.
 It is inspired by the physical phenomenon of harmonics.
 
 In physics, a tone with a frequency that is an integer multiple of a main frequency is called a harmonic.
@@ -625,7 +626,7 @@ Remember from section~\ref{section_equally_temperedness} that this means that we
 We will first have to convert these approximations to tones before we can study them like we did in the previous chapters.
 For now we will not study approximation recovery algorithms, but use an easy method to derive the actual tones that are used in the composition.
 But please keep in mind that may not be the best way to do it.
-For each equally tempered tone, we will just take the closest tone occuring in the Ptolemaic Sequence, presented in example~\ref{ptolemaic_sequence}.
+For each equally tempered tone, we will just take the closest tone occurring in the Ptolemaic Sequence, presented in example~\ref{ptolemaic_sequence}.
 Since this piece is in major scale and contains no ``accidentals'', this may be suitable enough.
 We will choose the note ``d'' as the tonic, since this piece is written in ``D major''.
 
@@ -706,12 +707,12 @@ The results are displayed in figure~\ref{fig_first_violin_harmonic_distance_to_t
 
 We can observe that the distance to the previous tone is most of the time greater than the distance to the tonic.
 There are three exceptions, where the distance to the tonic is $7$ and the distance to the previous tone is $6$.
-Perhaps these exeptions could serve as a starting point for formalization of other concepts, like functions of harmony, or resolution, but that is beyond the scope of this thesis.
+Perhaps these exceptions could serve as a starting point for formalization of other concepts, like functions of harmony, or resolution, but that is beyond the scope of this thesis.
 
 \section{Analysis of a two-voice polyphonic part}
 Let us not stick to the first six measures of the first violin, but consider another part.
 We would like to analyze polyphony now.
-Since we did not say anything about rythm and related things, we will restrict ourselves to a part where tones are played simultanuously.
+Since we did not say anything about rhythm and related things, we will restrict ourselves to a part where tones are played simultaneously.
 We therefore decide to consider measures 11 till 15 of both the first and the second violin.
 The tones are displayed in figure~\ref{fig_first_second_violin_tones}.
 
@@ -722,13 +723,13 @@ The tones are displayed in figure~\ref{fig_first_second_violin_tones}.
     \label{fig_first_second_violin_tones}
 \end{figure}
 
-We can now compute the harmonic distance and the pitch distance between each pair of tones that are played simultanuously.
+We can now compute the harmonic distance and the pitch distance between each pair of tones that are played simultaneously.
 The result is displayed in figure~\ref{fig_first_second_violin_melodic_and_harmonic_distance_self}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.25]{figures/fig_first_second_violin_melodic_and_harmonic_distance_self.png}
-    \caption{Measures 11 till 15 of first and second violin, showing harmonic distance above and pitch distance below between tones played simultanuously}
+    \caption{Measures 11 till 15 of first and second violin, showing harmonic distance above and pitch distance below between tones played simultaneously}
     \label{fig_first_second_violin_melodic_and_harmonic_distance_self}
 \end{figure}
 
@@ -740,25 +741,25 @@ The pairs of tones that have a mutual distance of 3 and 4 are traditionally call
 These intervals are mostly recognized as simple harmonies as well, though less simple than the octave.
 It looks like the harmonic distance not only says something about how simple the harmonic relation is between tones, but also about how simple their sound tend to be judged in traditional music theory.
 
-One might wonder if the pitch distance and the harmonic distance neutralize each other for tones that are played simultanuously.
+One might wonder if the pitch distance and the harmonic distance neutralize each other for tones that are played simultaneously.
 To check this, we compute the pitch-harmonic distance, as before.
 The result is displayed in figure~\ref{fig_first_second_violin_melodic_harmonic_distance_self}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.25]{figures/fig_first_second_violin_melodic_harmonic_distance_self.png}
-    \caption{Measures 11 till 15 of first and second violin, showing pitch-harmonic distance between tones played simultanuously}
+    \caption{Measures 11 till 15 of first and second violin, showing pitch-harmonic distance between tones played simultaneously}
     \label{fig_first_second_violin_melodic_harmonic_distance_self}
 \end{figure}
 
 As we can see, this does not hold.
-The numbers are very scattered, suggesting that pitch distance and harmonic distance do not behave adversely for simultanuously played tones.
-However, it is noteworthy that there are relatively large sequences of $10$'s co\"inciding with the two voices going up and down simultanuously and having a difference of exactly two tones in the Ptolemaic scale.
-%An exception on this is the pair of tones $\frac{9}{8}$ (``e'') and $\frac{9}{8}$ (``g'') having pitch-harmonic distance of $14$ and ocurring twice.
-%So apparently, melodic and harmonic distance \emph{do} behave adversely in most of the cases where two voices are going up and down simultanuously and are having a difference of exactly two tones in the Ptolemaic scale.
+The numbers are very scattered, suggesting that pitch distance and harmonic distance do not behave adversely for simultaneously played tones.
+However, it is noteworthy that there are relatively large sequences of $10$'s co\"inciding with the two voices going up and down simultaneously and having a difference of exactly two tones in the Ptolemaic scale.
+%An exception on this is the pair of tones $\frac{9}{8}$ (``e'') and $\frac{9}{8}$ (``g'') having pitch-harmonic distance of $14$ and occurring twice.
+%So apparently, melodic and harmonic distance \emph{do} behave adversely in most of the cases where two voices are going up and down simultaneously and are having a difference of exactly two tones in the Ptolemaic scale.
 
 \section{Conclusion}
-Of course we can not draw any defitive conclusions from what we did in this chapter.
+Of course we can not draw any definitive conclusions from what we did in this chapter.
 We only considered a very small part of a specific musical piece.
 To get a better idea of the musical meaning of the concepts of pitch distance and harmonic distance, much more analysis should be done.
 Also, we did not test different parameters for the distances, but only considered one possible setting.
@@ -778,7 +779,7 @@ In chapter~\ref{tonal_space} we tried to formulate what we would consider to be 
 This appeared to be a number, in the context of an abelian group under number multiplication.
 In chapter~\ref{distance} we considered several metrical properties of this formalization of tones.
 We gave formal definitions of them, and gave proofs, among others, that they indeed satisfy the axioms of distance.
-Finally, in chapter~\ref{application}, we applied the model to few measures of Pachelbell's Canon.
+Finally, in chapter~\ref{application}, we applied the model to few measures of Pachelbel's Canon.
 Investigating the results, it looked like there was some consistence in it.
 The results were not random but showed some system.
 Sometimes they seemed to coincide with some aspects of our musical experience.
