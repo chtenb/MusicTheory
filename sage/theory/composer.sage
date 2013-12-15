@@ -4,23 +4,21 @@ from metrics import (
     harmonic_distance, melodic_harmonic_distance, melodic_distance)
 
 
-def tonal_space():
+def tonal_space(max_harmonix_distance):
     """Return a set that we use as tonal space
-    :returns: @todo
-
+    :max_harmonic_distance: integer
+    :returns: list of tones
     """
     tonal_space = [2 ^ x * 3 ^ y * 5 ^ z for x in range(
         -4, 5) for y in range(-2, 3) for z in range(-2, 3)]
     # print sorted(tonal_space)
-    return filter(lambda t: melodic_distance(t) < 12, tonal_space)
+    return filter(lambda t: melodic_distance(t) < max_harmonix_distance, tonal_space)
 
 
 def generate_melody(length):
     """Generate a melody
-
     :length: number
     :returns: Composition
-
     """
     melody = Composition()
     melody.harmonies.append(Harmony([1], 1, 0))
