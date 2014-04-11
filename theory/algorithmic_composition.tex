@@ -1,0 +1,45 @@
+\documentclass{article}
+\title{Algorithmic Music Composition}
+\author{Ch.\ B. ten Brinke}
+
+\date{\today}
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Short introduction to subject of the paper \ldots 
+\end{abstract}
+
+\section{Introduction}
+Algorithmic music composition is useful in several ways.
+Not only may it provide convenience in producing musical compositions, it also may enhance our understanding of music through the models and methods we use.
+Besides, think of the potential that realtime music generation has in video games.
+Nowadays it is often hard to make the music react on what happens in the game.
+It is mostly accomplished by making a switch to another (part of a) soundtrack as smoothly as possible or, the other way around, by making the game react on the soundtrack.
+It would be helpful in this area if we really could generate decent music that corresponds to what happens in the game, on a realtime basis.
+
+\section{Divide and Conquer (or Reductionism)}
+A technique that is often used in mathematics to describe a complex phenomenon is Divide and Conquer.
+In this technique the system is cut into smaller components, which are then 
+investigated seperately.
+Afterwards, the knowledge gained is put together again to make up a model for the system that were to be described.
+
+This technique may be beneficial here.
+To the author it seems that some aspects of musical harmony do allow to be studied independently.
+Let us look at an example.
+Consider the major dominant septime $E_7$ chord.
+It solves well to the minor $A_m$ chord.
+Now if we remove the tone $e$ in $E_7$ we get a $G_{\#dim}$ chord, which also solves to $A_m$, but less well.
+The observation here is that removing a single tone from a chord doesn't necassarily change the musical meaning of the chord completely.
+
+A second example.
+Consider the chords $E_7$ and $F_{m6}$.
+They both solve to $A_m$
+Both consisting of four tones, they have only two tones in common, namely $g_\#$ and $d$.
+This suggests that exactly these two tones are responsible for $E_7$ and $F_{m6}$ being able to solve to $A_m$.
+
+If this were true in general, we could certainly benefit from studying the properties of small (parts of) musical objects.
+Namely, the knowledge of the smaller components of a musical object would tell us how the bigger whole works.
+
+\end{document}
