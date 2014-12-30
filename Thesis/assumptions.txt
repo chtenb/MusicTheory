@@ -1,7 +1,0 @@
-The consonance of a relation is determined by 
-i) the complexity of the relation
-ii) how often per second the relation sounds.
-So C(t) = c(t,u)*lcm(t,u).
-
-i) Should explain why (1,7) > (1,8)
-ii) Explains why (4,5,6) < (4,5,6)/3
