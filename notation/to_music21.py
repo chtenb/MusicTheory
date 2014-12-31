@@ -46,5 +46,5 @@ def construct_music21(musicobject):
 
 
 def frequency_to_semitone(frequency):
-    return int(12 * log(frequency, 2))
+    return int(round(12 * log(frequency, 2)))
 

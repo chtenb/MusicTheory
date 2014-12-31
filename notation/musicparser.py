@@ -1,4 +1,5 @@
-from pyparsing import Regex, OneOrMore, Forward, delimitedList, restOfLine, Group as Grp, Dict, Suppress
+from pyparsing import (Regex, OneOrMore, Forward, delimitedList, restOfLine, Group as Grp,
+                       Suppress)
 from musicobject import Tone, Group, Transformed
 
 
@@ -35,9 +36,9 @@ example = """
     (1, 2) * {c   e   f   e   d                   c   g   c}
 }
 """
-    #(2, 1) * {c c g g a a g _ (f, 1/2) (_, 1/2) f e e d d (c, 2)},
 
-result = music_object.parseString(example)
+#result = music_object.parseString(example)
+result = music_object.parseFile('example.music')
 print(result[0])
 
 from to_music21 import construct_music21
