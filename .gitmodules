@@ -1,0 +1,3 @@
+[submodule "libs/music21"]
+	path = libs/music21
+	url = https://github.com/cuthbertLab/music21.git
