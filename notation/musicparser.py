@@ -7,14 +7,15 @@ music_object = Forward()
 comment = '#' + restOfLine
 music_object.ignore(comment)
 
-fraction = Regex(r'\d+(/\d+)?')
-fraction.setParseAction(lambda s, l, t: [float(t[0])])
+#fraction = Regex(r'(\d*[./]?\d*)')
+number = Regex(r'[\d./]+')
+number.setParseAction(lambda s, l, t: [float(eval(t[0]))])
 
-frequency_symbol = Regex(r'[abcdefg_]\d?[#b]?')
-frequency_number = fraction
+frequency_symbol = Regex(r'[abcdefg_]\d?[#-]?')
+frequency_number = number
 frequency = frequency_number ^ frequency_symbol
 
-duration = fraction
+duration = number
 
 tone = frequency ^ (Suppress('(') + frequency + Suppress(',') + duration + Suppress(')'))
 tone.setParseAction(lambda s, l, t: Tone(*t))
@@ -30,14 +31,12 @@ music_object << (tone ^ group ^ transformed)
 example = """
 {
     # This is a comment
-    (2, 1) * {c c g g a a g _ f f e e d d c},
-    (1, 2) * {c   e   f   e   d   c   g   c}
+    (c5, 1) * {c c g g a a g _ (1, 1/2) * {f _} f e e d d (c, 2)},
+    (1, 2) * {c   e   f   e   d                   c   g   c}
 }
 """
-    #{c   e   f   e,   d   c   g   (c, 1)},
-    #(c4, 5) * {c c# g g a a g _ f f e e db b b d c} #asf
-    #(c4, 5) * {c c# g g a a g _ f f e e db b b d c}, #asf
-    #(c3, 2) * {c   e   f   e   d   c   g   (c, 1)}
+    #(2, 1) * {c c g g a a g _ (f, 1/2) (_, 1/2) f e e d d (c, 2)},
+
 result = music_object.parseString(example)
 print(result[0])
 

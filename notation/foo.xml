@@ -14,11 +14,11 @@
     </scaling>
   </defaults>
   <part-list>
-    <score-part id="Pf29e84b6e4a2173637120cd916cae889">
+    <score-part id="P8fe901be356122b55d2630e7cf92bf70">
       <part-name></part-name>
     </score-part>
   </part-list>
-  <part id="Pf29e84b6e4a2173637120cd916cae889">
+  <part id="P8fe901be356122b55d2630e7cf92bf70">
     <measure number="1">
       <attributes>
         <divisions>10080</divisions>
@@ -175,9 +175,16 @@
           <step>F</step>
           <octave>5</octave>
         </pitch>
-        <duration>10080</duration>
+        <duration>5040</duration>
         <voice>1</voice>
-        <type>quarter</type>
+        <type>eighth</type>
+        <notations/>
+      </note>
+      <note>
+        <rest/>
+        <duration>5040</duration>
+        <voice>1</voice>
+        <type>eighth</type>
         <notations/>
       </note>
       <note>
@@ -266,13 +273,13 @@
           <step>C</step>
           <octave>5</octave>
         </pitch>
-        <duration>10080</duration>
+        <duration>20160</duration>
         <voice>1</voice>
-        <type>quarter</type>
+        <type>half</type>
         <notations/>
       </note>
       <backup>
-        <duration>30240</duration>
+        <duration>40320</duration>
       </backup>
       <note>
         <pitch>

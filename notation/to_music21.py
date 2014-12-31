@@ -1,19 +1,6 @@
 from musicobject import Tone, Group, Transformed
-from music21 import stream, note, duration
+from music21 import stream, note, duration, interval
 from math import log
-
-#compound = stream.Stream()
-#s1 = stream.Stream()
-#s1.append(note.Note('C'))
-#s1.append(note.Note('C'))
-#s2 = stream.Stream()
-#s2.append(note.Note('G'))
-#s2.append(note.Note('F'))
-#compound.insert(0, stream.Stream(stream.Stream(s1)))
-#compound.insert(0, stream.Stream(stream.Stream(s2)))
-
-#compound.semiFlat.show('text')
-#compound.semiFlat.write('musicxml', 'bar.xml')
 
 
 def construct_music21(musicobject):
@@ -46,10 +33,10 @@ def construct_music21(musicobject):
 
         # Apply frequency transformation
         if isinstance(T.frequency, float):
-            interval = frequency_to_semitone(T.frequency)
+            difference = frequency_to_semitone(T.frequency)
         else:
-            interval = T.frequency
-        subject.transpose(interval, inPlace=True)
+            difference = interval.notesToInterval(note.Note('c4'), note.Note(T.frequency))
+        subject.transpose(difference, inPlace=True)
 
         return subject
 
