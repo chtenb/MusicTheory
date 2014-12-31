@@ -14,11 +14,11 @@
     </scaling>
   </defaults>
   <part-list>
-    <score-part id="P8fe901be356122b55d2630e7cf92bf70">
+    <score-part id="P2723139d1d8cd3e2e167de1f8653cff2">
       <part-name></part-name>
     </score-part>
   </part-list>
-  <part id="P8fe901be356122b55d2630e7cf92bf70">
+  <part id="P2723139d1d8cd3e2e167de1f8653cff2">
     <measure number="1">
       <attributes>
         <divisions>10080</divisions>
@@ -34,7 +34,7 @@
       <note>
         <pitch>
           <step>C</step>
-          <octave>5</octave>
+          <octave>6</octave>
         </pitch>
         <duration>10080</duration>
         <voice>1</voice>

@@ -31,7 +31,7 @@ music_object << (tone ^ group ^ transformed)
 example = """
 {
     # This is a comment
-    (c5, 1) * {c c g g a a g _ (1, 1/2) * {f _} f e e d d (c, 2)},
+    (c5, 1) * {2 c g g a a g _ (1, 1/2) * {f _} f e e d d (c, 2)},
     (1, 2) * {c   e   f   e   d                   c   g   c}
 }
 """

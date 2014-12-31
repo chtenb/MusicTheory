@@ -6,7 +6,11 @@ from math import log
 def construct_music21(musicobject):
     """Export a music21 stream from the given musicobject."""
     if type(musicobject) == Tone:
-        if musicobject.frequency == '_':
+        if isinstance(musicobject.frequency, float):
+            n = note.Note()
+            difference = frequency_to_semitone(musicobject.frequency)
+            n.transpose(difference, inPlace=True)
+        elif musicobject.frequency == '_':
             n = note.Rest()
         else:
             n = note.Note()
@@ -43,3 +47,4 @@ def construct_music21(musicobject):
 
 def frequency_to_semitone(frequency):
     return int(12 * log(frequency, 2))
+
