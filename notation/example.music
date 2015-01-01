@@ -1,4 +1,3 @@
-{
 # Objects separated by spaces are played sequentially
 # Objects separated by commas are played simultaneously
 # Objects can be grouped together by {...} to form a new object
@@ -9,10 +8,11 @@
 # To apply a transformation to a group, the transformation is placed in front of the subject
 # with a star symbol
 
+{
 # Consider the example below
 {
-    (c4, 1) * {c c g g a a g _ f f e e d d (c, 2)},
-    (c3, 2) * {c   e   f   e   d   c   g   c}
+    (c4, 1) * {c c g g a a g _ f f e e d d       (c, 2)},
+    (c3, 2) * {c   e   f   e   d   c   1/2 * g   c}
 }
 
 # Tones can also be expressed by a number, denoting their frequency
@@ -20,7 +20,19 @@
 # Therefore the above piece could equivalently have been written as follows
 {
     (1, 1) * {1 1 3/2 3/2 5/3 5/3 3/2 _ 4/3 4/3 5/4 5/4 9/8 9/8 (1, 2)},
-    (1/2, 2) * {1   5/4     4/3     5/4   9/8     1       2/3     1}
+    (1/2, 2) * {1   5/4     4/3     5/4   9/8     1       3/4     1}
 }
 
+# Idea:
+# Numbers can be constructed by the usual expressions.
+# Numbers are frequencies by default.
+# A duration parameter can be specified after a `|` symbol, which has a low precedence
+# Parenthesis are not needed for tuples anymore, so they can replace curly brackets.
+# So we have the usual arithmetic, extended with frequency constants and the operators
+# ` ` (sequential operator)
+# `,` (parallel operator)
+# `|` (duration operator)
+(
+    c3 * (c   e   f   e   d   c   g | 1/2   c) | 2
+)
 }

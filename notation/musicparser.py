@@ -3,10 +3,10 @@ from pyparsing import (Regex, OneOrMore, Forward, delimitedList, restOfLine, Gro
 from musicobject import Tone, Group, Transformed
 
 
-music_object = Forward()
+musicobject = Forward()
 
 comment = '#' + restOfLine
-music_object.ignore(comment)
+musicobject.ignore(comment)
 
 #fraction = Regex(r'(\d*[./]?\d*)')
 number = Regex(r'[\d./]+')
@@ -21,24 +21,15 @@ duration = number
 tone = frequency ^ (Suppress('(') + frequency + Suppress(',') + duration + Suppress(')'))
 tone.setParseAction(lambda s, l, t: Tone(*t))
 
-group = Suppress('{') + delimitedList(Grp(OneOrMore(music_object)), ',') + Suppress('}')
+group = Suppress('{') + delimitedList(Grp(OneOrMore(musicobject)), ',') + Suppress('}')
 group.setParseAction(lambda s, l, t: Group(t))
 
-transformed = tone + '*' + group
+transformed = tone + '*' + musicobject
 transformed.setParseAction(lambda s, l, t: Transformed(t[0], t[2]))
-music_object << (tone ^ group ^ transformed)
+musicobject << (tone ^ group ^ transformed)
 
 
-example = """
-{
-    # This is a comment
-    (c5, 1) * {2 c g g a a g _ (1, 1/2) * {f _} f e e d d (c, 2)},
-    (1, 2) * {c   e   f   e   d                   c   g   c}
-}
-"""
-
-#result = music_object.parseString(example)
-result = music_object.parseFile('example.music')
+result = musicobject.parseFile('example.music')
 print(result[0])
 
 from to_music21 import construct_music21

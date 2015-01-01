@@ -14,11 +14,11 @@
     </scaling>
   </defaults>
   <part-list>
-    <score-part id="Pab0e1057f62e34c9db03f5b14e4ae272">
+    <score-part id="Pa1b90fe624e7b50f76f80ddabcec90e9">
       <part-name></part-name>
     </score-part>
   </part-list>
-  <part id="Pab0e1057f62e34c9db03f5b14e4ae272">
+  <part id="Pa1b90fe624e7b50f76f80ddabcec90e9">
     <measure number="1">
       <attributes>
         <divisions>10080</divisions>
@@ -277,7 +277,7 @@
       <note>
         <pitch>
           <step>G</step>
-          <octave>3</octave>
+          <octave>2</octave>
         </pitch>
         <duration>20160</duration>
         <voice>2</voice>
@@ -547,7 +547,7 @@
       </backup>
       <note>
         <pitch>
-          <step>F</step>
+          <step>G</step>
           <octave>2</octave>
         </pitch>
         <duration>20160</duration>

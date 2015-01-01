@@ -32,8 +32,11 @@ def construct_music21(musicobject):
         T = musicobject.transformation
 
         # Apply duration transformation
-        subject.scaleDurations(T.duration)
-        subject.scaleOffsets(T.duration)
+        if type(musicobject.subject) == Tone:
+            subject.duration = duration.Duration(subject.duration.quarterLength * T.duration)
+        else:
+            subject.scaleDurations(T.duration)
+            subject.scaleOffsets(T.duration)
 
         # Apply frequency transformation
         if isinstance(T.frequency, float):
