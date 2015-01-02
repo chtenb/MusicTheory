@@ -9,15 +9,12 @@
 # `|` (duration operator, precedence 3)
 # ` ` (serial operator, precedence 2)
 # `,` (parallel operator, precedence 1)
-(
-    c   e   f   e   d   c   g   c
-)
 
-# The advantage of choosing this precedence order is that we can write mutliple voices easily
-#(
-    #c g a g f e (d d) | 1/2 c,
-    #c e f e d c g           c
-#)
+# The advantage of choosing this precedence order is that we can write multiple voices easily
+(
+    c g a g f e (d d) / 2 | 1/2 c,
+    c e f e d c g           c
+)
 # The disadvantage of choosing this precedence order is that writing chords requires parenthesis
 #(
     #c (e, g) (f, a) (e, g) (f, a) (e, g) (g/2, (d d) | 1/2) c
