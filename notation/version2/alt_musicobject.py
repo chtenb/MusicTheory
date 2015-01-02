@@ -1,4 +1,37 @@
 
+class Multiplication:
+
+    def __init__(self, elements):
+        self.elements = elements
+
+    def __repr__(self):
+        return '({})'.format(' | '.join(str(e) for e in self.elements))
+
+class Duration:
+
+    def __init__(self, elements):
+        self.elements = elements
+
+    def __repr__(self):
+        return '({})'.format(' | '.join(str(e) for e in self.elements))
+
+class Serial:
+
+    def __init__(self, elements):
+        self.elements = elements
+
+    def __repr__(self):
+        return '({})'.format(' '.join(str(e) for e in self.elements))
+
+class Parallel:
+
+    def __init__(self, elements):
+        self.elements = elements
+
+    def __repr__(self):
+        return '({})'.format(', '.join(str(e) for e in self.elements))
+
+
 class Tone:
 
     def __init__(self, frequency, duration=1):
