@@ -1,4 +1,4 @@
-from musicobject import Duration, Parallel, Serial, Multiplication, Frequency
+from operations import Duration, Parallel, Serial, Multiplication, Frequency
 from music21 import stream, note, interval
 from math import log
 
