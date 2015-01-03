@@ -11,8 +11,8 @@
 # `,` (parallel operator, precedence 1)
 
 # The advantage of choosing this precedence order is that we can write multiple voices easily
-c g a g f e (d d) / 2 | 1/2 c,
-c e f e d c g           c
+c g a g f e (d d) | 2 c,
+c e f e d c g |4          c
 # The disadvantage of choosing this precedence order is that writing chords requires parenthesis
 #(
     #c (e, g) (f, a) (e, g) (f, a) (e, g) (g/2, (d d) | 1/2) c

@@ -16,8 +16,8 @@ class BinaryOperation:
 
     formatstring = 'BinaryOperation({}, {})'
 
-    def __init__(self, operand1, operand2):
-        self.operands = (operand1, operand2)
+    def __init__(self, left, right):
+        self.operands = (left, right)
 
     def __getitem__(self, index):
         return self.operands[index]
@@ -27,7 +27,6 @@ class BinaryOperation:
 
 
 class Multiplication(BinaryOperation):
-
     formatstring = '{} * {}'
 
 

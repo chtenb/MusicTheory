@@ -90,8 +90,11 @@ maobject.ignore(comment)
 def parse_file(filename):
     return maobject.parseFile(filename)
 
-print(parse_file('example.ma'))
 
-#from to_music21 import construct_music21
-#construct_music21(result[0]).write('musicxml', 'foo.xml')
-# construct_music21(result[0]).show('text')
+
+test = parse_file('example.ma')[0]
+print(test)
+from to_music21 import construct_music21
+construct_music21(test).show('text')
+construct_music21(test).write('musicxml', 'foo.xml')
+
