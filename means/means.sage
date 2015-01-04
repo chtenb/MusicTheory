@@ -1,9 +1,5 @@
-def arithmean(*numbers):
-    """Arithmetical mean"""
-    return sum(numbers) / len(numbers)
 
-
-def geomean(*numbers):
+def geomean(numbers):
     """Geometric mean"""
     product = 1
     for n in numbers:
@@ -11,27 +7,24 @@ def geomean(*numbers):
     return pow(product, 1 / len(numbers))
 
 
-def harmonicmean(*numbers):
-    """Harmonic mean"""
-    reciprocals = [1 / n for n in numbers]
-    return len(numbers) / sum(reciprocals)
+def p_mean(p, numbers):
+    """Power mean"""
+    if p == 0:
+        return geomean(numbers)
+
+    powers = [n ** p for n in numbers]
+    return (sum(powers) / len(numbers)) ** (1 / p)
 
 
-def quadraticmean(*numbers):
-    """Quadratic mean"""
-    squares = [n ** 2 for n in numbers]
-    return sqrt(sum(numbers) / len(numbers))
+def lehmer_mean(p, numbers):
+    """Power mean"""
+    if p == 0:
+        return geomean(numbers)
+
+    numpowers = [n ** p for n in numbers]
+    denpowers = [n ** (p - 1) for n in numbers]
+    return sum(numpowers) / sum(denpowers)
 
 
-def quadratic_harmonicmean(*numbers):
-    """Quadratic mean"""
-    square_reciprocals = [1 / n ** 2 for n in numbers]
-    return len(numbers) / sum(square_reciprocals) ** 2
-
-
-print(arithmean(1, 2))
-print(geomean(1, 2))
-print(harmonicmean(1, 2))
-print(quadraticmean(1, 2))
-print(quadratic_harmonicmean(1, 2))
-
+for p in range(-9, 10):
+    print('p = {}: {}'.format(p, lehmer_mean(p, [1, 2])))
