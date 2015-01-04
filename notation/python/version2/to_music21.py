@@ -42,6 +42,12 @@ def frequency(freq):
 
 
 def multiplication(left, right):
+    left = construct_music21(left)
+    right = construct_music21(right)
+
+    if isinstance(left, note.Note) and isinstance(right, note.Note):
+        result = note.Note()
+
     raise NotImplementedError
 
 
