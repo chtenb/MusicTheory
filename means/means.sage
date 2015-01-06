@@ -41,12 +41,10 @@ def chiel_mean(numbers, integer=False):
                 powersums[prime] = power
 
     result = 1
-    if integer:
-        n = len(numbers)
-    else:
-        n = QQ(len(numbers))
+    n = QQ(len(numbers))
     for prime, powersum in powersums.items():
-        result *= prime ** (powersum / n)
+        poweravg = round(powersum / n) if integer else powersum / n
+        result *= prime ** poweravg
     return result
 
 
@@ -68,10 +66,11 @@ def list_epimoric(amount=20):
         if count > amount:
             break
 
+
 def run():
-    print(chiel_mean([1, 5/3]))
-    print(geomean([1, 5/3]))
-    #for p in range(-3, 4):
+    for number in [1, 2, 3, 4, 2 / 3, 3 / 4, 4 / 5, 5 / 6, 6 / 7, 7 / 3, 6 / 3, 9 / 4, 7 / 2, 6 / 5]:
+        assert chiel_mean([1, number]) == geomean([1, number])
+    # for p in range(-3, 4):
         #print('p = {}: {}'.format(p, chiel_mean(p, [1, 3/2])))
 
 run()
