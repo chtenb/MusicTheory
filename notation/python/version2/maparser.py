@@ -94,7 +94,7 @@ def parse_file(filename):
 
 test = parse_file('example.ma')[0]
 print(test)
-from to_music21 import construct_music21
-construct_music21(test).show('text')
-construct_music21(test).write('musicxml', 'foo.xml')
+#from to_music21 import construct_music21
+#construct_music21(test).show('text')
+#construct_music21(test).write('musicxml', 'foo.xml')
 

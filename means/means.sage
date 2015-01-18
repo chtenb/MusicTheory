@@ -30,7 +30,7 @@ def sym_lehmer_mean(p, numbers):
     return lehmer_mean(p, numbers)
 
 
-def chiel_mean(numbers, integer=False):
+def chiel_mean(numbers, round_powers=True):
     """Chiel mean"""
     powersums = {}
     for number in numbers:
@@ -43,7 +43,7 @@ def chiel_mean(numbers, integer=False):
     result = 1
     n = QQ(len(numbers))
     for prime, powersum in powersums.items():
-        poweravg = round(powersum / n) if integer else powersum / n
+        poweravg = round(powersum / n) if round_powers else powersum / n
         result *= prime ** poweravg
     return result
 
@@ -69,7 +69,7 @@ def list_epimoric(amount=20):
 
 def run():
     for number in [1, 2, 3, 4, 2 / 3, 3 / 4, 4 / 5, 5 / 6, 6 / 7, 7 / 3, 6 / 3, 9 / 4, 7 / 2, 6 / 5]:
-        assert chiel_mean([1, number]) == geomean([1, number])
+        print('{}: {}'.format(number, chiel_mean([1, number])))
     # for p in range(-3, 4):
         #print('p = {}: {}'.format(p, chiel_mean(p, [1, 3/2])))
 
