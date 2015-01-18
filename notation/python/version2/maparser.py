@@ -3,27 +3,13 @@ from operations import Parallel, Serial, Duration, Division, Multiplication, Fre
 pp.ParserElement.enablePackrat()
 
 
-def num(s):
-    try:
-        return int(s)
-    except ValueError:
-        return float(s)
-
-number = pp.Regex(r'\d*[.]?\d+')
-#number.setParseAction(lambda s, l, t: [num(t[0])])
-
-frequency_symbol = pp.Regex(r'[abcdefg_]\d?[#-]?')
-frequency = number ^ frequency_symbol
-
-
 def frequency_action(s, l, t):
     t = t.asList()[0]
     return [Frequency(t)]
+number = pp.Regex(r'\d*[.]?\d+')
+frequency_symbol = pp.Regex(r'[abcdefg_]\d?[#-]?')
+frequency = number ^ frequency_symbol
 frequency.setParseAction(frequency_action)
-#frequency.setParseAction(lambda s, l, t: [num(t[0])])
-
-
-mul = pp.oneOf('/ *')
 
 
 def mul_action(s, l, t):
@@ -39,11 +25,8 @@ def mul_action(s, l, t):
             raise ValueError('Bogus multiplicative expression.')
 
         i += 2
-
     return result
-
-
-duration = pp.Literal('|')
+mul = pp.oneOf('/ *')
 
 
 def duration_action(s, l, t):
@@ -52,9 +35,7 @@ def duration_action(s, l, t):
     for token in tokens[1:]:
         result = Duration(result, token)
     return result
-
-
-serial = pp.Optional(pp.Empty(), default='')
+duration = pp.Literal('|')
 
 
 def serial_action(s, l, t):
@@ -63,9 +44,7 @@ def serial_action(s, l, t):
     for token in tokens[1:]:
         result = Serial(result, token)
     return result
-
-
-parallel = pp.Literal(',')
+serial = pp.Optional(pp.Empty(), default='')
 
 
 def parallel_action(s, l, t):
@@ -74,6 +53,7 @@ def parallel_action(s, l, t):
     for token in tokens[1:]:
         result = Parallel(result, token)
     return result
+parallel = pp.Literal(',')
 
 
 maobject = pp.operatorPrecedence(frequency, [
@@ -88,13 +68,4 @@ maobject.ignore(comment)
 
 
 def parse_file(filename):
-    return maobject.parseFile(filename)
-
-
-
-test = parse_file('example.ma')[0]
-print(test)
-#from to_music21 import construct_music21
-#construct_music21(test).show('text')
-#construct_music21(test).write('musicxml', 'foo.xml')
-
+    return maobject.parseFile(filename)[0]

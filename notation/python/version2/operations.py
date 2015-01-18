@@ -15,7 +15,7 @@ class Frequency:
 class BinaryOperation:
 
     formatstring = 'BinaryOperation({}, {})'
-    precedence = 1
+    precedence = 0
 
     def __init__(self, left, right):
         self.operands = (left, right)
@@ -35,7 +35,7 @@ class BinaryOperation:
         operand_strings = []
         for operand in self.operands:
             if (isinstance(operand, BinaryOperation)
-                    and self.precedence < operand.precedence):
+                    and operand.precedence < self.precedence):
                 operand_strings.append('({})'.format(operand))
             else:
                 operand_strings.append(str(operand))
@@ -45,22 +45,24 @@ class BinaryOperation:
 
 class Multiplication(BinaryOperation):
     formatstring = '{} * {}'
+    precedence = 4
 
 
 class Division(BinaryOperation):
     formatstring = '{} / {}'
+    precedence = 4
 
 
 class Duration(BinaryOperation):
     formatstring = '{} | {}'
-    precedence = 2
+    precedence = 3
 
 
 class Serial(BinaryOperation):
     formatstring = '{} {}'
-    precedence = 3
+    precedence = 2
 
 
 class Parallel(BinaryOperation):
     formatstring = '{}, {}'
-    precedence = 3
+    precedence = 1
