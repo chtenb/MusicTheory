@@ -1,5 +1,5 @@
 from operations import Duration, Parallel, Serial, Multiplication, Division, Frequency
-from music21 import stream, note, interval
+from music21 import stream, note
 from math import log
 
 unit_note = note.Note()
@@ -26,7 +26,7 @@ def construct_music21(maobject):
     if type(maobject) == Parallel:
         return parallel(*maobject)
 
-    raise ValueError('Given object not a music arithmatic object.')
+    raise ValueError('Given object not a music arithmetic object.')
 
 
 def frequency(freq):
@@ -107,8 +107,8 @@ def transpose(subject, freq):
     else:
         s = stream.Stream()
         for element in subject:
-            s.insert(element.offset, transpose(element, freq))
-            #s.append(transpose(element, freq))
+            #s.insert(element.offset, transpose(element, freq))
+            s.append(transpose(element, freq))
         return s.flat
 
 

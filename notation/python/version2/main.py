@@ -1,4 +1,6 @@
 from maparser import parse_file
+from subprocess import call
+call(["ls", "-l"])
 
 test = parse_file('example.ma')
 print(test)
@@ -11,6 +13,8 @@ m21_result.show('text')
 #m21_result.show('musicxml')
 #m21_result.show('lily')
 #m21_result.show('musicxml.png')
-#m21_result.write('midi', 'output/foo.mid')
+m21_result.write('midi', 'output/foo.mid')
+call(['midi2ly', 'output/foo.mid', '-o', 'output/foo.ly'])
+call(['lilypond', '-o', 'output/foo', 'output/foo.ly'])
 
-m21_result.write('lily.png', 'output/foo')
+#m21_result.write('lily.png', 'output/foo')
