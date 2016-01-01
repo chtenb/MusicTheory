@@ -1,10 +1,13 @@
 from operations import Duration, Parallel, Serial, Multiplication, Division, Frequency
-from music21 import stream, note
-from math import log
+from music21 import stream, note, pitch
+from math import log, floor, pow
 
 unit_note = note.Note()
 unit_note.pitch.frequency = 1
 unit_note.duration.quarterLength = 1
+
+C4 = 261.6
+C0 = 16.35
 
 def construct_music21(maobject):
     """Export a music21 stream from the given maobject."""
@@ -34,12 +37,37 @@ def frequency(freq):
         freq = float(freq)
         n = note.Note()
         n.pitch.frequency = freq
+        #relative_freq = freq / C0
+        #octave = floor(log(relative_freq, 2))
+        #pitchClass = floor(log(relative_freq, pow(2, 1/12))) % 12
+        #microtone = floor(log(relative_freq, pow(2, 1/1200))) % 100
+        #n.pitch.octave = octave
+        #n.pitch.pitchClass = pitchClass
+        #n.pitch.microtone = pitch.Microtone(microtone)
+        #assert n.pitch.octave == octave
+        #assert n.pitch.pitchClass == semitone
+        #assert n.pitch.microtone.cents == microtone
+        #print(microtone)
+
+        #goal = freq
+        #octave = n.pitch.octave
+        #semitone = n.pitch.pitchClass
+        #microtone = n.pitch.microtone.cents
+        ##actual = C0 * 2**octave * 2**(semitone/12) * 2**(microtone/1200)
+        #actual = C0 * pow(2, octave) * pow(2, semitone/12) * pow(2, microtone/1200)
+        #print('-----------------------')
+        #print(octave, semitone, microtone)
+        #print('Goal: {}'.format(goal))
+        #print('Actual: {}'.format(actual))
+        #print(round(goal / actual, 3))
+
     except ValueError:
         if freq == '_':
             n = note.Rest()
         else:
             n = note.Note()
             n.pitch.name = freq
+
     return n
 
 
@@ -107,8 +135,7 @@ def transpose(subject, freq):
     else:
         s = stream.Stream()
         for element in subject:
-            #s.insert(element.offset, transpose(element, freq))
-            s.append(transpose(element, freq))
+            s.insert(element.offset, transpose(element, freq))
         return s.flat
 
 

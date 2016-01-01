@@ -18,7 +18,11 @@
 
 # The disadvantage of choosing this precedence order is that writing chords requires parenthesis
 (
-    d (e, g) (f, a) (e, g) (d, f) (c, e) (g/2, (d d) | .5) c
+    c (e, g) (f, a) (e, g) (d, f) (c, e) (g/2, (d d) | .5) c
+)
+
+261.6 * (
+    1 (5/4, 3/2) (4/3, 5/3) (5/4, 3/2) (9/8, 4/3) (1, 5/4) (3/4, (9/8 9/8) | .5) 1
 )
 
 # If we swap the precedence order of `,` and ` `, the parts would look like this
